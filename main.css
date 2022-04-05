@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.todo {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.todo__container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.todo__wrapper-btn {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.todo__btn {
+    padding: 0 8px;
+}
+
+.todo__form {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/*_____todo__list_____*/
+
+.todo__list {
+    list-style-type: none;
+    text-align: center;
+}
+.todo__item {
+    align-items: center;
+    margin-bottom: 5px;
+}
+.todo__item-input:checked + .todo__item-text {
+    text-decoration: line-through;
+}
+
+.todo__item-text {}
+.todo__item-btn {
+    margin-left: 5px;
+    padding: 0 5px;
+}
