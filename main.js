@@ -106,13 +106,26 @@ elTodoList.addEventListener("click", function(evt) {
         
         todosArray.splice(foundTodoIndex, 1)
         
+        renderTodos(todosArray, elTodoList)
+        storage.setItem("todoArray", JSON.stringify(todosArray))
         updateArray()
     }
 })
 
 
 function calculateTodos(array) {
+    let complatedTodos = array.filter(item => item.isComplated === true)
+    let notComplatedTodos = array.filter(item => item.isComplated === false)
 
+    console.log(complatedTodos);
+
+    let allTodoNumber = array.length
+    let complatedTodoNumber = allTodoNumber - notComplatedTodos.length
+    let notComplatedTodoNumber = allTodoNumber - complatedTodoNumber
+
+    elAllCount.textContent = array.length
+    elComplatedCount.textContent = complatedTodoNumber
+    elUncomplatedCount.textContent = notComplatedTodoNumber
 }
 
 calculateTodos(todosArray)
